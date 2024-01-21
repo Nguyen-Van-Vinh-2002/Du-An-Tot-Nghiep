@@ -1,436 +1,541 @@
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.75);
+}
+
+
 /*Header */
+
 .custom-navbar {
-    background-color: #343a40; /* Màu nền cho navbar */
-    padding: 1rem; /* Khoảng trắng bên trong navbar */
+    background-color: #343a40;
+    /* Màu nền cho navbar */
+    padding: 1rem;
+    /* Khoảng trắng bên trong navbar */
     display: flex;
-    justify-content: space-between; /* Canh giữa và đặt các phần tử sang hai bên */
-    align-items: center; /* Canh giữa theo chiều dọc */
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem; /* Kích thước chữ cho brand */
-    color: #ffffff; /* Màu chữ cho brand */
-    font-weight: bold; /* Độ đậm cho chữ brand */
-  }
-  
-  .navbar-nav {
+    justify-content: space-between;
+    /* Canh giữa và đặt các phần tử sang hai bên */
+    align-items: center;
+    /* Canh giữa theo chiều dọc */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    /* Kích thước chữ cho brand */
+    color: #ffffff;
+    /* Màu chữ cho brand */
+    font-weight: bold;
+    /* Độ đậm cho chữ brand */
+}
+
+.navbar-nav {
     display: flex;
     align-items: center;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #ffffff; /* Màu chữ cho các liên kết trong navbar */
-    margin-right: 15px; /* Khoảng cách giữa các liên kết */
-  }
-  /* Search Form Styles */
-  .form-inline {
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    /* Màu chữ cho các liên kết trong navbar */
+    margin-right: 15px;
+    /* Khoảng cách giữa các liên kết */
+}
+
+
+/* Search Form Styles */
+
+.form-inline {
     display: flex;
     align-items: center;
     position: relative;
-  }
-  
-  .form-control {
-    border: 1px solid #ffffff; /* Màu viền cho ô nhập liệu */
-    margin-right: 10px; /* Khoảng cách giữa ô nhập liệu và nút tìm kiếm */
-  }
-  
-  /* Button Styles */
-  .btn-outline-success {
-    color: #ffffff; /* Màu chữ cho nút tìm kiếm */
-    border-color: #ffffff; /* Màu viền cho nút tìm kiếm */
-  }
-  
-  /* Cart Icon Styles */
-  #cart-icon {
-    color: #ffffff; /* Màu chữ cho biểu tượng giỏ hàng */
-    font-size: 1.2rem; /* Kích thước chữ cho biểu tượng giỏ hàng */
-  }
-  
-  /* Move Login, Register, and Search to the right */
-  .navbar-nav .nav-link {
+}
+
+.form-control {
+    border: 1px solid #ffffff;
+    /* Màu viền cho ô nhập liệu */
+    margin-right: 10px;
+    /* Khoảng cách giữa ô nhập liệu và nút tìm kiếm */
+}
+
+
+/* Button Styles */
+
+.btn-outline-success {
+    color: #ffffff;
+    /* Màu chữ cho nút tìm kiếm */
+    border-color: #ffffff;
+    /* Màu viền cho nút tìm kiếm */
+}
+
+
+/* Cart Icon Styles */
+
+#cart-icon {
+    color: #ffffff;
+    /* Màu chữ cho biểu tượng giỏ hàng */
+    font-size: 1.2rem;
+    /* Kích thước chữ cho biểu tượng giỏ hàng */
+}
+
+
+/* Move Login, Register, and Search to the right */
+
+.navbar-nav .nav-link {
     margin-right: 0;
-  }
-  
-  .navbar-nav {
+}
+
+.navbar-nav {
     margin-left: auto;
-  }
-  
-  /* Overlay Styles */
-  .overlay {
+}
+
+
+/* Overlay Styles */
+
+.overlay {
     display: none;
     position: fixed;
-    top: 56px; /* Height of the navbar */
+    top: 56px;
+    /* Height of the navbar */
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-    z-index: 1000; /* Ensure the overlay is above other elements */
-  }
-  
-  /* Search Form Animation */
-  .form-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black overlay */
+    z-index: 1000;
+    /* Ensure the overlay is above other elements */
+}
+
+
+/* Search Form Animation */
+
+.form-overlay {
     display: none;
     position: fixed;
-    top: 56px; /* Height of the navbar */
+    top: 56px;
+    /* Height of the navbar */
     left: 0;
     width: 100%;
-    background-color: #343a40; /* Background color of the search form */
-    z-index: 1001; /* Ensure the search form is above the overlay */
+    background-color: #343a40;
+    /* Background color of the search form */
+    z-index: 1001;
+    /* Ensure the search form is above the overlay */
     padding: 10px;
     animation: slideDown 0.3s ease-out;
-  }
-  
-  @keyframes slideDown {
+}
+
+@keyframes slideDown {
     from {
-      transform: translateY(-100%);
+        transform: translateY(-100%);
     }
     to {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
-  /* Update existing styles */
-  .form-inline .form-control,
-  .form-inline .btn-outline-success {
+}
+
+
+/* Update existing styles */
+
+.form-inline .form-control,
+.form-inline .btn-outline-success {
     margin-right: 0;
-  }
-  
-  /* Show overlay and search form when .show-overlay class is added */
-  .show-overlay .overlay,
-  .show-overlay .form-overlay {
+}
+
+
+/* Show overlay and search form when .show-overlay class is added */
+
+.show-overlay .overlay,
+.show-overlay .form-overlay {
     display: block;
-  }
-  /* styles.css */
-  
-  /* ... (Các phần CSS khác) */
-  
-  .navbar-nav .nav-link {
-    color: #ffffff; /* Màu chữ cho các liên kết trong navbar */
-    margin-right: 15px; /* Khoảng cách giữa các liên kết */
-    transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu trong 0.3s */
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #28a745; /* Màu xanh lá cây khi hover */
-  }
-  
-  /* ... (Các phần CSS khác) */
-  /* styles.css */
-  
-  /* ... (Các phần CSS khác) */
-  
-  #cart-icon {
-    color: #ffffff; /* Màu chữ cho biểu tượng giỏ hàng */
-    font-size: 1.2rem; /* Kích thước chữ cho biểu tượng giỏ hàng */
-    transition: color 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu trong 0.3s */
-  }
-  
-  #cart-icon:hover {
-    color: #28a745; /* Màu xanh lá cây khi hover */
-  }
-  
+}
+
+
+/* styles.css */
+
+
+/* ... (Các phần CSS khác) */
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    /* Màu chữ cho các liên kết trong navbar */
+    margin-right: 15px;
+    /* Khoảng cách giữa các liên kết */
+    transition: color 0.3s ease;
+    /* Thêm hiệu ứng chuyển đổi màu trong 0.3s */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745;
+    /* Màu xanh lá cây khi hover */
+}
+
+
+/* ... (Các phần CSS khác) */
+
+
+/* styles.css */
+
+
+/* ... (Các phần CSS khác) */
+
+#cart-icon {
+    color: #ffffff;
+    /* Màu chữ cho biểu tượng giỏ hàng */
+    font-size: 1.2rem;
+    /* Kích thước chữ cho biểu tượng giỏ hàng */
+    transition: color 0.3s ease;
+    /* Thêm hiệu ứng chuyển đổi màu trong 0.3s */
+}
+
+#cart-icon:hover {
+    color: #28a745;
+    /* Màu xanh lá cây khi hover */
+}
+
+
 /* FavoritesProduct */
+
 .favorite-products-container {
-  background-color: #f8f9fa;
-  padding: 50px 0;
+    background-color: #f8f9fa;
+    padding: 50px 0;
 }
 
 .favorite-card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  height: 100%;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
 }
 
 .favorite-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .image-container {
-  position: relative;
-  overflow: hidden;
-  height: 200px;
+    position: relative;
+    overflow: hidden;
+    height: 200px;
 }
 
 .card-img-top {
-  object-fit: cover;
-  height: 100%;
-  transition: transform 0.3s;
+    object-fit: cover;
+    height: 100%;
+    transition: transform 0.3s;
 }
 
 .favorite-card:hover .card-img-top {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .card-title {
-  font-size: 1.5rem;
-  color: #343a40;
-  text-align: center;
-  margin-bottom: 5px;
+    font-size: 1.5rem;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .card-price {
-  font-size: 1.2rem;
-  color: #dc3545;
-  text-align: center;
-  margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 .rating-container {
-  display: flex;
-  justify-content: center;
-  color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    color: #f8f9fa;
 }
 
 .star {
-  font-size: 1.5rem;
-  margin-right: 3px;
+    font-size: 1.5rem;
+    margin-right: 3px;
 }
 
 .star.filled {
-  color: #ffc107;
+    color: #ffc107;
 }
 
 .btn-details {
-  background-color: #007bff;
-  border-color: #007bff;
-  transition: background-color 0.3s, color 0.3s;
-  display: block;
-  margin: auto;
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+    margin: auto;
 }
 
 .btn-details:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-  color: #fff;
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
 }
 
 .btn-details:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
+
 /* Footer*/
+
 .footer {
-  padding: 30px 0;
+    padding: 30px 0;
 }
 
 .footer h5 {
-  color: #fff;
+    color: #fff;
 }
 
 .footer p {
-  color: #aaa;
+    color: #aaa;
 }
 
 .social-icons i {
-  font-size: 24px;
-  color: #fff;
-  margin-right: 10px;
+    font-size: 24px;
+    color: #fff;
+    margin-right: 10px;
 }
 
 .footer-bottom {
-  background-color: #333;
+    background-color: #333;
 }
 
 .footer-bottom p {
-  margin-bottom: 0;
-  color: #aaa;
+    margin-bottom: 0;
+    color: #aaa;
 }
+
+
 /* Banner ProductPage */
+
 .video-banner {
-  position: relative;
-  width: 80%;
-  height: 80vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto; /* Center the container horizontally */
-  transition: margin-top 0.3s ease, border-radius 0.3s ease;
+    position: relative;
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Center the container horizontally */
+    transition: margin-top 0.3s ease, border-radius 0.3s ease;
 }
 
 .banner-video {
-  width: 100%; /* Adjusted width to fill the container */
-  height: 100%; /* Adjusted height to fill the container */
-  object-fit: cover;
- 
+    width: 100%;
+    /* Adjusted width to fill the container */
+    height: 100%;
+    /* Adjusted height to fill the container */
+    object-fit: cover;
 }
 
 .video-banner.hovered {
-  margin-top: 20px;
-  border-radius: 50px;
-  border: 2px solid black;
+    margin-top: 20px;
+    border-radius: 50px;
+    border: 2px solid black;
 }
+
+
 /* // CategoryMenu */
+
+
 /* Add this CSS to your stylesheets or use a CSS-in-JS solution */
+
 .category-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
 }
 
 .category-menu a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .category-menu a:hover {
-  color: #007bff;
+    color: #007bff;
 }
-.title{
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-size: 60px;
+
+.title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 60px;
 }
+
 .sp {
- color: #28a745;
- font-size: 40px;
+    color: #28a745;
+    font-size: 40px;
 }
+
+
 /* ShoppingItem.css */
+
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 20px; /* Increase bottom margin for better separation */
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  margin: 0 auto;
-  height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    /* Increase bottom margin for better separation */
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    height: 100%;
 }
 
 .card:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .card-img-top {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 .card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px; /* Increase padding for better spacing */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    /* Increase padding for better spacing */
 }
 
 .card-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 10px; /* Adjusted bottom margin for the title */
-  text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* Adjusted bottom margin for the title */
+    text-align: center;
 }
 
 .card-text {
-  color: #555;
-  text-align: center;
-  margin-bottom: 10px; /* Adjusted bottom margin for the text */
+    color: #555;
+    text-align: center;
+    margin-bottom: 10px;
+    /* Adjusted bottom margin for the text */
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-  align-self: center;
-  margin-top: 10px;
+    background-color: #007bff;
+    border-color: #007bff;
+    align-self: center;
+    margin-top: 10px;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
+
+
 /* ListProductPage.css */
+
 .mb-4 label {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .mb-4 select {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
 }
 
 .mb-4 select:hover {
-  border-color: #007bff;
+    border-color: #007bff;
 }
 
 .mb-4 select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .row {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
+
+
 /* src/components/Login.css */
+
 .login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .login-form {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
 }
 
 .login-form form {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-primary {
-  background-color: #007bff;
+    background-color: #007bff;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
+
 .form-control {
-  border: 1px solid #343a40;
+    border: 1px solid #343a40;
 }
+
+
 /* src/components/SignUp.css */
+
 .signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .signup-form {
-  max-width: 400px;
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
 }
 
 .signup-form form {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .btn-primary {
-  background-color: #007bff;
+    background-color: #007bff;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
-

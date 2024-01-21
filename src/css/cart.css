@@ -1,0 +1,40 @@
+/* start css cart */
+
+.cart table {
+    min-width: 1296px;
+}
+
+.cart td a:hover {
+    color: rgba(255, 0, 0, 0.5);
+    font-weight: 800;
+}
+
+.quantity button,
+.quantity input {
+    min-height: 50px;
+}
+
+.delete-product {
+    font-size: 24px;
+    background: none;
+}
+
+.delete-product:hover {
+    color: red;
+}
+
+.quantity button:hover {
+    background-color: green;
+    color: white;
+}
+
+.cart select:hover {
+    border: solid red;
+}
+
+.total {
+    font-weight: 750;
+}
+
+
+/* end css cart */
