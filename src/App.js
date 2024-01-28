@@ -8,6 +8,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import SignupPage from './Pages/LoginPage/SignupPage';
 import HstoryPage from './Pages/HstoryPage/HstoryPage';
 import CartPage from './Pages/CartPage/CartPage';
+import CareersPage from './Pages/CareersPage/CareersPage';
 
 
 const App = () => {
@@ -15,14 +16,14 @@ const App = () => {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} /> 
-          <Route path="/products" element={<ProductPage />} />
-          <Route path="/news" element={<NewsPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/purchase-history" element={<HstoryPage />} />
-          <Route path="/cart" element={<CartPage />} />
-         
+          <Route path="/" element={<HomePage/>} /> 
+          <Route path="/products" element={<ProductPage/>}/>
+          <Route path="/news" element={<NewsPage/>}/>
+          <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/signup" element={<SignupPage/>}/>
+          <Route path="/purchase-history" element={<HstoryPage/>}/>
+          <Route path="/cart" element={<CartPage/>}/>
+          <Route path="/screen" element={<CareersPage/>}/>
         </Routes>
       </Router>
     </div>

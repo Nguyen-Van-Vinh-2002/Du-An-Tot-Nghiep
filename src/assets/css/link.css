@@ -1,0 +1,6 @@
+.link-row a{
+    color: black;
+}
+.link-row a:hover{
+color: rgb(0, 140, 255);
+}

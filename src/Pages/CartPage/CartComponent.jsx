@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../../App.css'
-import '../../css/cart.css'
+import '../../assets/css/cart.css'
 
 const Cart = () => {
     return (

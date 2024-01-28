@@ -21,7 +21,7 @@ const Header = () => {
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="products">MacBook</Nav.Link>
-            <Nav.Link href="careers">Màn hình</Nav.Link>
+            <Nav.Link href="screen">Màn hình</Nav.Link>
             <Nav.Link href="contact">Phụ kiện</Nav.Link>
             <Nav.Link href="news">Tin tức</Nav.Link>
           </Nav>

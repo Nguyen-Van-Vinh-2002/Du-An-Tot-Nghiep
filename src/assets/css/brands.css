@@ -1,0 +1,21 @@
+.bg-main{
+    background-color: rgb(233, 233, 233);
+}
+
+.brand-table img {
+    min-width: 100px;
+    min-height: 10 0px;
+}
+
+.brand-table {
+    width: 100%;
+}
+.brands button{
+    background-color: transparent;
+    border: 0px;
+}
+
+.brands button:hover {
+    border:solid rgba(0, 162, 255, 0.75);
+    background-color: rgba(0, 162, 255, 0.25);
+}
