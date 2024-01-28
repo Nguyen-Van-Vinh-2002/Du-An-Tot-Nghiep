@@ -12,6 +12,7 @@ import Link from './Link'
 import Brands from './Brands'
 import Filter from './Filter'
 import ScreenProducts from './ScreenProducts'
+import Footer from '../../Components/Footer';
 
 
 const ScreenPage = () => {
@@ -24,6 +25,7 @@ const ScreenPage = () => {
         <Filter />
         <ScreenProducts />
       </div>
+      <Footer></Footer>
     </div>
   )
 }
