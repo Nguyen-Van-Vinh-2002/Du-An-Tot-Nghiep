@@ -8,7 +8,7 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import SignupPage from './Pages/LoginPage/SignupPage';
 import HstoryPage from './Pages/HstoryPage/HstoryPage';
 import CartPage from './Pages/CartPage/CartPage';
-import CareersPage from './Pages/CareersPage/CareersPage';
+import ScreenPage from './Pages/ScreenPage/ScreenPage';
 
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/signup" element={<SignupPage/>}/>
           <Route path="/purchase-history" element={<HstoryPage/>}/>
           <Route path="/cart" element={<CartPage/>}/>
-          <Route path="/screen" element={<CareersPage/>}/>
+          <Route path="/screen" element={<ScreenPage/>}/>
         </Routes>
       </Router>
     </div>
