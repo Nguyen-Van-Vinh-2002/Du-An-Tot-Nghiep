@@ -1,6 +1,8 @@
 const ScreenProducts = () => {
     return (
-        <div className=""></div>
+        <div className="container row">
+
+        </div>
     );
   };
   
