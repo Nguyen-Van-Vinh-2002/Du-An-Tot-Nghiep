@@ -9,8 +9,8 @@ const CareersPage = () => {
   return (
     <div>
       <Header />
-      <Link />
       <div className="bg-main">
+        <Link />
         <Brands />
         <Careers />
       </div>
