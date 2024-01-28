@@ -8,10 +8,16 @@ const Brands = () => {
                     <div class="table-responsive col-10">
                         <table class="m-auto brand-table">
                             <tr class="m-auto">
-                                <th class="m-auto"><button class=" px-2 rounded-4 mx-3" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
-                                <th class="m-auto"><button class=" px-2 rounded-4 mx-3" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
-                                <th class="m-auto"><button class=" px-2 rounded-4 mx-3" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
-                                <th class="m-auto"><button class=" px-2 rounded-4 mx-3" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
+                                <th class="m-auto"><a href="#"><button class=" px-2 rounded-4 me-4" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></a></th>
                             </tr>
                         </table>
                     </div>
