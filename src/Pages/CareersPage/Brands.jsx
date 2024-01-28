@@ -4,7 +4,7 @@ import '../../assets/css/brands.css'
 
 const Brands = () => {
     return (
-        <main class="py-5">
+        <main class="">
             <div class="container">
                 <h2 class="text-center fw-bold">Màn hình</h2>
                 <div className="group brands row">
@@ -12,10 +12,10 @@ const Brands = () => {
                     <div class="table-responsive col-10">
                         <table class="m-auto brand-table">
                             <tr class="m-auto">
-                                <th class="m-auto"><button class=" px-5 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
-                                <th class="m-auto"><button class=" px-5 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
-                                <th class="m-auto"><button class=" px-5 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
-                                <th class="m-auto"><button class=" px-5 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
+                                <th class="m-auto"><button class=" px-2 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
+                                <th class="m-auto"><button class=" px-2 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
+                                <th class="m-auto"><button class=" px-2 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
+                                <th class="m-auto"><button class=" px-2 rounded-5" type="button"><img src="https://macone.vn/wp-content/uploads/2023/05/Man-Hinh-Asus.png" alt="" /><p>Màn hình Asus</p></button></th>
                             </tr>
                         </table>
                     </div>
