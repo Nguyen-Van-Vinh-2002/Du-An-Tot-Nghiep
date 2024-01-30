@@ -9,6 +9,7 @@ import SignupPage from './Pages/LoginPage/SignupPage';
 import HstoryPage from './Pages/HstoryPage/HstoryPage';
 import CartPage from './Pages/CartPage/CartPage';
 import ScreenPage from './Pages/ScreenPage/ScreenPage';
+import Admin from './AdminPage/Admin/Admin.tsx';
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/purchase-history" element={<HstoryPage/>}/>
           <Route path="/cart" element={<CartPage/>}/>
           <Route path="/screen" element={<ScreenPage/>}/>
+          <Route path="/admin" element={<Admin/>}/>
         </Routes>
       </Router>
     </div>
