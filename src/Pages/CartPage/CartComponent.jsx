@@ -90,6 +90,42 @@ const Cart = () => {
                     </div>
                 </div>
             </div>
+            <div class="cart container bg-dark-subtle">
+                <div className='bg-white border-0 rounded-5'>
+                    <form action="" method="" className='row m-1 mb-3'>
+                        <div className='col-12 col-lg-9 col-xl-9 ps-4 row'>
+                            <div className='col-12 col-md-6 col-lg-4 col-xl-4 pt-2'>
+                                <label htmlFor="" className='fw-bold'>Họ và tên</label>
+                                <input class='form-control' type="text" />
+                                <label htmlFor="" className="error text-danger">Vui lòng nhập Họ và tên</label>
+                            </div>
+                            <div className='col-12 col-md-6 col-lg-4 col-xl-4 pt-2'>
+                                <label htmlFor="" className='fw-bold'>Họ và tên</label>
+                                <input class='form-control' type="text" />
+                                <label htmlFor="" className="error text-danger">Vui lòng nhập Họ và tên</label>
+                            </div>
+                            <div className='col-12 col-md-6 col-lg-4 col-xl-4 pt-2'>
+                                <label htmlFor="" className='fw-bold'>Họ và tên</label>
+                                <input class='form-control' type="text" />
+                                <label htmlFor="" className="error text-danger">Vui lòng nhập Họ và tên</label>
+                            </div>
+                            <div className='col-12 col-md-6 col-lg-4 col-xl-4 pt-2'>
+                                <label htmlFor="" className='fw-bold'>Họ và tên</label>
+                                <input class='form-control' type="text" />
+                                <label htmlFor="" className="error text-danger">Vui lòng nhập Họ và tên</label>
+                            </div>
+                            <div className='col-12 col-md-6 col-lg-4 col-xl-4 pt-2'>
+                                <label htmlFor="" className='fw-bold'>Họ và tên</label>
+                                <input class='form-control' type="text" />
+                                <label htmlFor="" className="error text-danger">Vui lòng nhập Họ và tên</label>
+                            </div>
+                        </div>
+                        <div className='col-12 col-xl-3 col-lg-3 col-md-3 row ps-4 mb-3'>
+                            <button style={{maxHeight:'50px'}} className='btn fw-bold btn-success just-content-center' type="submit">Thanh toán</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
     );
 };
