@@ -12,6 +12,7 @@ import ScreenPage from './Pages/ScreenPage/ScreenPage';
 import Admin from './Pages/Admin/dashboard';
 import Products from './Pages/Admin/products';
 import UserManagement from './Pages/Admin/users';
+import ProductDetail from './Pages/HomePage/ProductDetail';
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage/>} /> 
           <Route path="/products" element={<ProductPage/>}/>
+          <Route path="/products/:id" element={<ProductDetail/>}/>
           <Route path="/news" element={<NewsPage/>}/>
           <Route path="/login" element={<LoginPage/>}/>
           <Route path="/signup" element={<SignupPage/>}/>
