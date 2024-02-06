@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './Pages/HomePage/HomePage';
 import ProductPage from './Pages/ProductPage/ProductPage';
 import NewsPage from './Pages/NewsPage/NewsPage';
@@ -9,7 +9,9 @@ import SignupPage from './Pages/LoginPage/SignupPage';
 import HstoryPage from './Pages/HstoryPage/HstoryPage';
 import CartPage from './Pages/CartPage/CartPage';
 import ScreenPage from './Pages/ScreenPage/ScreenPage';
-import Admin from './AdminPage/Admin/Admin.tsx';
+import Admin from './Pages/Admin/dashboard';
+import Products from './Pages/Admin/products';
+import UserManagement from './Pages/Admin/users';
 
 
 const App = () => {
@@ -25,7 +27,10 @@ const App = () => {
           <Route path="/purchase-history" element={<HstoryPage/>}/>
           <Route path="/cart" element={<CartPage/>}/>
           <Route path="/screen" element={<ScreenPage/>}/>
-          <Route path="/admin" element={<Admin/>}/>
+           <Route path="/admin" element={<Admin/>}/>
+           <Route path="/admin/products" element={<Products/>}/>
+           <Route path="/admin/users" element={<UserManagement/>}/>
+
         </Routes>
       </Router>
     </div>
