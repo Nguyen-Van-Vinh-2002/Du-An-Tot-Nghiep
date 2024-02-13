@@ -23,13 +23,42 @@ const HstoryPage = () => {
       shippingAddress: '456 Đường XYZ, Quận ABC, TP.HCM',
       orderStatus: 'Đang vận chuyển',
       orderCode: 'DH789012'
+    }, {
+      productName: 'Sản phẩm C',
+      quantity: 2,
+      orderValue: 49.98,
+      paymentMethod: 'Thẻ tín dụng',
+      purchaseDate: '01/20/2024',
+      shippingAddress: '123 Đường ABC, Quận XYZ, TP.HCM',
+      orderStatus: 'Đã giao hàng',
+      orderCode: 'DH123456'
+    },
+    {
+      productName: 'Sản phẩm D',
+      quantity: 2,
+      orderValue: 49.98,
+      paymentMethod: 'Thẻ tín dụng',
+      purchaseDate: '01/20/2024',
+      shippingAddress: '123 Đường ABC, Quận XYZ, TP.HCM',
+      orderStatus: 'Đã giao hàng',
+      orderCode: 'DH123456'
+    },
+    {
+      productName: 'Sản phẩm d',
+      quantity: 2,
+      orderValue: 49.98,
+      paymentMethod: 'Thẻ tín dụng',
+      purchaseDate: '01/20/2024',
+      shippingAddress: '123 Đường ABC, Quận XYZ, TP.HCM',
+      orderStatus: 'Đã giao hàng',
+      orderCode: 'DH123456'
     },
     // Thêm dữ liệu mua hàng khác nếu cần
   ];
   return (
     <div>
-        <Header/>
-        <HistoryComponent purchaseHistory={purchaseHistory}/>
+      <Header />
+      <HistoryComponent purchaseHistory={purchaseHistory} />
     </div>
   )
 }
