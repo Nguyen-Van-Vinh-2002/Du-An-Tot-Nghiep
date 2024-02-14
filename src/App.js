@@ -13,6 +13,9 @@ import Admin from './Pages/Admin/dashboard';
 import Products from './Pages/Admin/products';
 import UserManagement from './Pages/Admin/users';
 import ProductDetail from './Pages/HomePage/ProductDetail';
+import Blog from './Pages/Admin/Blog/Blog';
+import AddBlog from './Pages/Admin/Blog/AddBlog';
+import UpdateBlog from './Pages/Admin/Blog/UpdateBlog';
 
 
 const App = () => {
@@ -31,6 +34,9 @@ const App = () => {
           <Route path="/screen" element={<ScreenPage/>}/>
            <Route path="/admin" element={<Admin/>}/>
            <Route path="/admin/products" element={<Products/>}/>
+           <Route path="/admin/blog" element={<Blog/>}/>
+           <Route path="/admin/blog/add" element={<AddBlog/>}/>
+           <Route path="/admin/blog/:id/update" element={<UpdateBlog/>}/>
            <Route path="/admin/users" element={<UserManagement/>}/>
 
         </Routes>

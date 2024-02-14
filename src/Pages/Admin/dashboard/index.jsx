@@ -75,6 +75,20 @@ const Dashboard = () => {
                         <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Xem chi tiết</button>
                     </div>
                 </div>
+                 {/* Tin Tức */}
+                 <div className="bg-white shadow-lg rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:scale-105">
+                    <div className="px-6 py-4">
+                        <div className="flex items-center justify-between">
+                            <span className="text-lg font-bold text-gray-800">Tin Tức</span>
+                            <div className="bg-purple-500 text-white px-2 py-1 rounded-full text-sm">Monthly</div>
+                        </div>
+                        <div className="text-gray-600 mt-2">Tổng tin tức</div>
+                        <div className="text-3xl font-semibold text-gray-700 mt-1">...</div>
+                    </div>
+                    <div className="px-6 py-4">
+                        <Link to="./blog/" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Xem chi tiết</Link>
+                    </div>
+                </div>
             </div>
         </div>
     );
