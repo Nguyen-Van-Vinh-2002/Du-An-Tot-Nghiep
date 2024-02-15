@@ -18,6 +18,10 @@ const ProductDetail = () => {
     setCurrentSlide(current);
   };
 
+  const handleAddToCart = () => {
+  
+  };
+
   const handleThumbnailClick = (index) => {
     // console.log(index);
     setCurrentSlide(index);
@@ -257,7 +261,7 @@ const ProductDetail = () => {
             <div className="purchase-section">
               <button className="buy-now-button">Mua Ngay</button>
               <div className="additional-buttons">
-                <button className="additional-button">Thêm vào giỏ hàng</button>
+              <button className="additional-button" onClick={handleAddToCart}>Thêm vào giỏ hàng</button>
                 <button className="additional-button">Mua trả góp</button>
               </div>
             </div>
