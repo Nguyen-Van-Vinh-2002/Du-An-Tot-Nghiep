@@ -1,6 +1,7 @@
 import React from "react";
-import { Button, Upload, Form, Input } from "antd";
+import { Button, Upload, Form, Input,DatePicker } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+const { TextArea } = Input;
 const AddBlog = () => {
   const onFinish = () => {
     console.log("Success:", values);
@@ -41,20 +42,13 @@ const AddBlog = () => {
           <Input />
         </Form.Item>
 
-        <Form.Item
-          label="Nội dung"
-          name="noidung"
-          rules={[{ required: true, message: "Vui long nhap noi dung!" }]}
-        >
-          <Input />
+       
+        <Form.Item label="Nội dung">
+          <TextArea rows={4} />
         </Form.Item>
-        <Form.Item
-          label="Ngày đăng"
-          name="ngaydang"
-          rules={[{ required: true, message: "Vui long nhap ngay dang!" }]}
-        >
-          <Input />
-        </Form.Item>
+        <Form.Item label="Ngày đăng">
+        <DatePicker />
+      </Form.Item>
         <Form.Item
           label="Image"
           name="image"
@@ -66,7 +60,7 @@ const AddBlog = () => {
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-          <Button htmlType="submit">Submit</Button>
+          <Button htmlType="submit">Thêm</Button>
         </Form.Item>
       </Form>
     </div>

@@ -38,8 +38,8 @@ const Blog = () => {
           key: 'hanhdong',
           render: (_, record) => (
             <Space size="middle">
-              <Link to={'/admin/blog/:id/update'}><button style={{background:"green",color:"white",}}>Update</button></Link>
-              <button style={{background:"red",color:"white"}}>Delete</button>
+              <Link to={'/admin/blog/:id/update'}><button style={{color:"green"}}>Update</button></Link>
+              <button style={{color:"red"}}>Delete</button>
             </Space>
           ),
         },
