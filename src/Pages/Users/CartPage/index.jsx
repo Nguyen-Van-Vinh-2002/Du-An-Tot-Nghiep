@@ -1,14 +1,19 @@
-import React, { useState, useEffect } from 'react'; // Thêm useEffect vào danh sách nhập
-
+import React, { useState, useEffect } from 'react';
 import Header from '../../../Components/Header';
 import Footer from '../../../Components/Footer';
 
 const ShoppingCart = () => {
     const [data, setData] = useState(null);
+    const [cartItems, setCartItems] = useState([]);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
         fetchData();
     }, []);
+
+    useEffect(() => {
+        calculateTotalPrice();
+    }, [cartItems]);
 
     const fetchData = async () => {
         try {
@@ -20,27 +25,22 @@ const ShoppingCart = () => {
         }
     };
 
-    // State để lưu trữ số lượng và màu sắc của sản phẩm
-    const [quantity, setQuantity] = useState(1);
-    const [color, setColor] = useState('Màu mặc định');
-
-    // Hàm xử lý thay đổi số lượng
-    const handleQuantityChange = (event) => {
-        // Lấy giá trị số lượng từ input
-        let newQuantity = parseInt(event.target.value);
-    
-        // Kiểm tra nếu giá trị số lượng nhỏ hơn 1, đặt giá trị mới là 1
-        if (newQuantity < 1) {
-            newQuantity = 1;
-        }
-    
-        // Cập nhật giá trị số lượng
-        setQuantity(newQuantity);
+    const addToCart = (item) => {
+        setCartItems([...cartItems, item]);
     };
 
-    // Hàm xử lý thay đổi màu sắc
-    const handleColorChange = (event) => {
-        setColor(event.target.value);
+    const removeFromCart = (index) => {
+        const newCartItems = [...cartItems];
+        newCartItems.splice(index, 1);
+        setCartItems(newCartItems);
+    };
+
+    const calculateTotalPrice = () => {
+        let totalPrice = 0;
+        cartItems.forEach((item) => {
+            totalPrice += item.quantity * item.price;
+        });
+        setTotalPrice(totalPrice);
     };
 
     return (
@@ -50,7 +50,6 @@ const ShoppingCart = () => {
                 <div className="container mx-auto px-4 py-8">
                     <h1 className="text-2xl font-bold mb-4">Giỏ hàng</h1>
 
-                    {/* Cart Items */}
                     <table className="table-auto w-full border-collapse border border-gray-300">
                         <thead>
                             <tr className="bg-gray-200">
@@ -62,40 +61,44 @@ const ShoppingCart = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td className="border p-2">
-                                    <img src="https://macone.vn/wp-content/uploads/2021/10/HAN00181-Lo%CC%9B%CC%81n-1024x682.jpeg" alt="Product" className="w-32 rounded-md mb-2" />
-                                    <div className="text-gray-800 font-bold">MacBook Pro 2022 13 inch Apple M2 8GB RAM 256GB SSD – NEW</div>
-                                </td>
-                                <td className="border p-2">
-                                    <input type="number" value={quantity} onChange={handleQuantityChange} />
-                                </td>
-                                <td className="border p-2">$10</td>
-                                <td className="border p-2">
-                                    <select value={color} onChange={handleColorChange}>
-                                        <option value="Màu mặc định">Màu mặc định</option>
-                                        <option value="Đỏ">Đỏ</option>
-                                        <option value="Xanh">Xanh</option>
-                                        <option value="Vàng">Vàng</option>
-                                    </select>
-                                </td>
-                                <td className="border p-2">
-                                    <button className="px-3 py-1 bg-red-500 text-white rounded-md">Xoá</button>
-                                </td>
-                            </tr>
+                            {cartItems.map((item, index) => (
+                                <tr key={index}>
+                                    <td className="border p-2">
+                                        <img src={item.image} alt="Product" className="w-32 rounded-md mb-2" />
+                                        <div className="text-gray-800 font-bold">{item.name}</div>
+                                    </td>
+                                    <td className="border p-2">
+                                        <input type="number" value={item.quantity} onChange={(e) => {}} />
+                                    </td>
+                                    <td className="border p-2">${item.price}</td>
+                                    <td className="border p-2">
+                                        <select value={item.color} onChange={(e) => {}}>
+                                            <option value="Màu mặc định">Màu mặc định</option>
+                                            <option value="Đỏ">Đỏ</option>
+                                            <option value="Xanh">Xanh</option>
+                                            <option value="Vàng">Vàng</option>
+                                        </select>
+                                    </td>
+                                    <td className="border p-2">
+                                        <button onClick={() => removeFromCart(index)} className="px-3 py-1 bg-red-500 text-white rounded-md">Xoá</button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
 
                     {/* Total */}
                     <div className="mt-8 text-right">
-                        <div className="text-xl font-bold">Tổng đơn hàng (tạm tính)</div>
+                        <div className="text-xl font-bold">Tổng đơn hàng (tạm tính): {totalPrice}VND</div>
                         <button className="mt-4 px-6 py-3 bg-green-500 text-white rounded-md">Thanh toán</button>
                     </div>
                 </div>
             </div>
             <Footer />
         </>
+        
     );
+    
 };
 
 export default ShoppingCart;
