@@ -43,7 +43,7 @@ const Products = () => {
 
     // Xác định trạng thái của checkbox "Chọn tất cả" và nút xoá
     useEffect(() => {
-        if (selectedProducts.length > 1) {
+        if (selectedProducts.length > 0) {
             // Nếu có ít nhất một sản phẩm được chọn, setAnySelected thành true
             setAnySelected(true);
         } else {
@@ -130,8 +130,7 @@ const Products = () => {
 
                                     </td>
                                 </tr>
-
-                         
+                                {/* Add more rows for other products */}
                             </tbody>
                         </table>
                     </div>
