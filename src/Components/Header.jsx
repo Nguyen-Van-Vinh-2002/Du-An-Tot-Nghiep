@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { Navbar, Nav, Form, FormControl } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useDispatch, useSelector } from "react-redux";
+import { SignoutUser } from '../Pages/LoginPage/UserAction';
 import { faSearch, faSignInAlt, faHistory, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import '../App.css';
 
+
 const Header = () => {
+  const dispatch = useDispatch();
+  const handleSignout = () => {
+    dispatch(SignoutUser());
+  };
   const [showSearch, setShowSearch] = useState(false);
 
   const toggleSearch = () => {
@@ -26,9 +33,18 @@ const Header = () => {
             <Nav.Link href="news">Tin tức</Nav.Link>
           </Nav>
           <Nav className="ml-auto">
-            <Nav.Link href="login" className="login">
-              <FontAwesomeIcon icon={faSignInAlt} /> Đăng Nhập
-            </Nav.Link>
+
+            {localStorage.getItem('userRole') == 1 ? (
+              <Nav.Link onClick={() => handleSignout()}  >
+                <FontAwesomeIcon icon={faSignInAlt} /> Đăng xuất
+              </Nav.Link>
+            ) : (
+
+              <Nav.Link href="login" className="login">
+                <FontAwesomeIcon icon={faSignInAlt} /> Đăng Nhập
+              </Nav.Link>
+
+            )}
             <Nav.Link href="purchase-history" className="register">
               <FontAwesomeIcon icon={faHistory} /> Lịch sử mua hàng
             </Nav.Link>
@@ -40,7 +56,7 @@ const Header = () => {
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar >
       <div className={`overlay ${showSearch ? 'show-overlay' : ''}`} onClick={toggleSearch}></div>
       <div className={`form-overlay ${showSearch ? 'show-overlay' : ''}`}>
         <Form inline>

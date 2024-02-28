@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import '../../App.css';  // Import file CSS mới
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 const FavoriteProducts = () => {
   const favoriteProducts = [
@@ -40,7 +41,13 @@ const FavoriteProducts = () => {
                     <span key={index} className={`star ${index + 1 <= product.rating ? 'filled' : ''}`}>★</span>
                   ))}
                 </div>
-                <Button variant="primary" className="btn-details">Xem chi tiết</Button>
+                <Button variant="primary" className="btn-details">
+                  <Link to={`/products/${product.id}`}
+                  style={{color:"white",textDecoration:'none'}}
+                  >
+                  Xem chi tiết
+                  </Link>
+                </Button>
               </Card.Body>
             </Card>
           </Col>

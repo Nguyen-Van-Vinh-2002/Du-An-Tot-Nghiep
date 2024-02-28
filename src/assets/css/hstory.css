@@ -1,0 +1,72 @@
+/* hstory.css */
+.bg-dark-subtle {
+    background-color: #cc1a38;
+    /* Màu nền */
+}
+
+.container {
+    max-width: 1200px;
+    /* Giới hạn chiều rộng của nội dung */
+    margin: 0 auto;
+    /* Canh giữa nội dung */
+}
+
+.cart {
+    border-radius: 10px;
+    /* Bo tròn góc */
+    padding: 15px;
+    /* Khoảng cách giữa nội dung và viền */
+    box-shadow: 0 0 10px rgba(30, 30, 30, 0.1);
+    /* Đổ bóng */
+}
+
+.table {
+    background-color: #0ed22b;
+    /* Màu nền của bảng */
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+    /* Khoảng cách giữa nội dung và viền của ô */
+    text-align: center;
+    /* Canh giữa nội dung trong ô */
+}
+
+.table th {
+    background-color: #ebeeef;
+    /* Màu nền của tiêu đề bảng */
+    color: #0b0b0b;
+    /* Màu chữ của tiêu đề bảng */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(2, 35, 57, 0.05);
+    /* Màu nền của hàng chẵn */
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(16, 208, 225, 0.075);
+}
+
+.btn-info {
+    background-color: #17a2b8;
+    border-color: #24706b;
+}
+
+.btn-info:hover {
+    background-color: #cb4a13;
+    border-color: #cb4a13;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 35px;
+    color: #0b0b0b;
+    font-weight: bold;
+}
